@@ -1,0 +1,14 @@
+<script>
+(function() {
+  var element = Object.create(HTMLElement.prototype)
+  element.createdCallback = function() {
+    var root = this.createShadowRoot()
+      , img = document.createElement('img')
+
+    root.appendChild(img)
+    img.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAxlBMVEUAAAAEX68CbLkFb7sMXqwRV6cDWqwCZbQCitEHWakCbboDidAIWaoAiM8CidADitEBYrIAhs4KjdEDjNIGUKMBidAKjdIDjNIGXK0Bf8gGjNIJjdIDi9ENWKgIWakbIXsDjNIFXKwDcr5NKX4Di9EcN40AjNIBfscTcrsDitAFcLwAidADg8oDitADe8UCbrsDitAAgM8Gf8gCh84CbLoAi9IAZbQAfMYAh88AitEAaLYAidAAdMAAd8IAesQAhs0AiM////8Zmj6DAAAANHRSTlMAxvSzAR2Q0sxp/slZ/OnF+f49vEj6Pr5Tym0Bwy1XC7tbtwTCEf70EMmW/cTLuf27AWLerImm8QAAAAFiS0dEQYnebE4AAAB2SURBVBjTjc1FFsJAEADRwiG4O8HdNUNDyP1PxWpeZ5la/k1BlGLxBElS6YyF+yMLuefLs+CYPIV3UUoKZSpVkZpCvfExzRYK7U63B32FwXDkhraOGU++/nQWgvnCX8pqrbBh+9vJXuEAR08CCydz5sL1FhCpP+txDIj9VrL6AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE0LTA1LTI4VDA5OjMxOjU3KzAyOjAwaYaxSwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNC0wNS0yOFQwOTozMTo1NyswMjowMBjbCfcAAAAASUVORK5CYII='
+  }
+
+  document.registerElement('x-k', { prototype: element })
+}())
+</script>
